@@ -1,0 +1,187 @@
+Magic 271485
+Revision Verdi_S-2021.09-SP2-9
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 960 936 138 50
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/61.RV32I_sync_isa_tests/sim/func_sim/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 806.955743 982.824192
+cursor 970.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 8
+
+; rename signal list
+; addRenameSig new_name org_name
+activeDirFile "" "/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/61.RV32I_sync_isa_tests/sim/func_sim/wave.fsdb"
+
+addRenameSig "/isa_testbench/CPU/icpu/i_datapath/InstrD_E/InstrE[31:0]" "/isa_testbench/CPU/icpu/i_datapath/InstrD_E/dout[31:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/isa_testbench/CPU/icpu/i_datapath/PCF_D/PCD[31:0]" "/isa_testbench/CPU/icpu/i_datapath/PCF_D/dout[31:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/isa_testbench/CPU/icpu/i_datapath/PCD_E/PCD[31:0]" "/isa_testbench/CPU/icpu/i_datapath/PCD_E/din[31:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/isa_testbench/CPU/icpu/i_datapath/u_pc_register/PCF[31:0]" "/isa_testbench/CPU/icpu/i_datapath/u_pc_register/q[31:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/isa_testbench/CPU/icpu/i_datapath/PCE_M/PCE[31:0]" "/isa_testbench/CPU/icpu/i_datapath/PCE_M/din[31:0]"
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/61.RV32I_sync_isa_tests/sim/func_sim/wave.fsdb"
+addSignal -h 15 /isa_testbench/CPU/icpu/clk
+addSignal -h 15 -holdScope n_rst
+addSignal -h 15 -holdScope PC[31:0]
+addSignal -h 15 -holdScope InstrD[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/u_branch/prediction
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/u_back_prediction/PC_targetD[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/u_branch/Btaken
+addSignal -h 15 -holdScope predictionE
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/rf/ra1[4:0]
+addSignal -h 15 -holdScope ra2[4:0]
+addSignal -h 15 -holdScope rd1[31:0]
+addSignal -h 15 -holdScope rd2[31:0]
+addSignal -h 15 -holdScope wd[31:0]
+addSignal -h 15 -holdScope we
+addSignal -h 15 /isa_testbench/CPU/icpu/PCSrc[1:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/u_pc_next_mux4/in0[31:0]
+addSignal -h 15 -holdScope in1[31:0]
+addSignal -h 15 -holdScope in2[31:0]
+addSignal -h 15 -holdScope in3[31:0]
+addSignal -h 15 -holdScope in4[31:0]
+addSignal -h 15 -holdScope in6[31:0]
+addSignal -h 15 -holdScope out[31:0]
+addSignal -h 15 -holdScope sel[1:0]
+addSubGroup "targetD" -e FALSE
+endSubGroup "targetD"
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/u_pc_prediction/a[31:0]
+addSignal -h 15 -holdScope b[31:0]
+addSignal -h 15 -holdScope sum[31:0]
+addSignal -h 15 -UNSIGNED -HEX /isa_testbench/CPU/icpu/i_datapath/PCF_D/PCD[31:0]
+addSubGroup "back_predition"
+endSubGroup "back_predition"
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/u_back_prediction/Branch
+addSignal -h 15 -holdScope PCD[31:0]
+addSignal -h 15 -holdScope prediction
+addSubGroup "PC_targetE"
+endSubGroup "PC_targetE"
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/u_pc_target/a[31:0]
+addSignal -h 15 -holdScope b[31:0]
+addSignal -h 15 -holdScope sum[31:0]
+addGroup "G2"
+addSignal -h 15 -UNSIGNED -HEX /isa_testbench/CPU/icpu/i_datapath/InstrD_E/InstrE[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/u_branch/funct3[2:0]
+addSignal -h 15 -holdScope PCSrc[2:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/u_stall/stall
+addSignal -h 15 -UNSIGNED -HEX /isa_testbench/CPU/icpu/i_datapath/u_pc_register/PCF[31:0]
+addSignal -h 15 -UNSIGNED -HEX /isa_testbench/CPU/icpu/i_datapath/PCD_E/PCD[31:0]
+addSignal -h 15 -UNSIGNED -HEX /isa_testbench/CPU/icpu/i_datapath/PCE_M/PCE[31:0]
+addSignal -h 15 -UNSIGNED -HEX /isa_testbench/CPU/icpu/i_datapath/PC_plus4F_D/din[31:0]
+addSignal -h 15 -holdScope dout[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/PC_plus4D_E/dout[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/PC_plus4E_M/dout[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/i_datapath/PC_plus4M_W/dout[31:0]
+addSignal -h 15 /isa_testbench/CPU/icpu/u_branch/BranchE
+addSignal -h 15 /isa_testbench/CPU/icpu/u_flush/FlushD
+addSignal -h 15 -holdScope FlushE
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/61.RV32I_sync_isa_tests/sim/func_sim/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/ASYNC_RAM_DP_WBE"
+"/isa_testbench"
+"/isa_testbench/CPU"
+"/isa_testbench/CPU/icpu"
+"/isa_testbench/CPU/icpu/i_datapath"
+"/isa_testbench/CPU/icpu/i_datapath/InstrD_E"
+"/isa_testbench/CPU/icpu/i_datapath/PCD_E"
+"/isa_testbench/CPU/icpu/i_datapath/PCE_M"
+"/isa_testbench/CPU/icpu/i_datapath/PCF_D"
+"/isa_testbench/CPU/icpu/i_datapath/PC_plus4E_M"
+"/isa_testbench/CPU/icpu/i_datapath/PC_plus4M_W"
+"/isa_testbench/CPU/icpu/i_datapath/u_back_prediction"
+"/isa_testbench/CPU/icpu/i_datapath/u_pc_next_mux4"
+"/isa_testbench/CPU/icpu/i_datapath/u_pc_register"
+"/isa_testbench/CPU/icpu/u_branch"
+"/isa_testbench/CPU/icpu/u_flush"
+
+SCOPE_LIST_BEGIN
+"/ASYNC_RAM_DP_WBE"
+"/isa_testbench"
+"/isa_testbench/CPU"
+"/isa_testbench/CPU/icpu"
+"/isa_testbench/CPU/icpu/i_datapath/rf"
+"/isa_testbench/CPU/icpu/i_datapath"
+"/isa_testbench/CPU/icpu/i_datapath/u_pc_target"
+"/isa_testbench/CPU/icpu/i_datapath/u_pc_register"
+"/isa_testbench/CPU/icpu/i_datapath/u_pc_next_mux4"
+"/isa_testbench/CPU/icpu/i_datapath/u_pc_prediction"
+"/isa_testbench/CPU/icpu/u_branch"
+"/isa_testbench/CPU/icpu/u_flush"
+"/isa_testbench/CPU/icpu/u_controller"
+"/isa_testbench/CPU/icpu/i_datapath/InstrD_E"
+"/isa_testbench/CPU/icpu/i_datapath/InstrE_M"
+"/isa_testbench/CPU/icpu/i_datapath/ImmExtD_E"
+"/isa_testbench/CPU/icpu/i_datapath/PC_plus4M_W"
+"/isa_testbench/CPU/icpu/i_datapath/PC_plus4E_M"
+"/isa_testbench/CPU/icpu/i_datapath/PCD_E"
+"/isa_testbench/CPU/icpu/i_datapath/PCF_D"
+"/isa_testbench/CPU/icpu/i_datapath/u_back_prediction"
+"/isa_testbench/CPU/icpu/i_datapath/u_stall"
+"/isa_testbench/CPU/icpu/i_datapath/PC_plus4F_D"
+"/isa_testbench/CPU/icpu/i_datapath/PC_plus4D_E"
+"/isa_testbench/CPU/icpu/i_datapath/PCE_M"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

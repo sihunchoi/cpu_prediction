@@ -35,7 +35,7 @@ module cpu_tb();
   initial clk = 0;
   always #(CPU_CLOCK_PERIOD/2) clk = ~clk;
   wire [31:0] csr;
-
+  localparam [11:0] IMM_BNE = 12'hFFC; 
   // Init PC with 32'h1000_0000 -- address space of IMem
   // When PC is in IMem's address space, IMem is read-only
   // DMem can be R/W as long as the addr bits [31:28] is 4'b00x1
@@ -69,7 +69,7 @@ module cpu_tb();
     );
 
 
-  wire [31:0] timeout_cycle = 25; //10
+  wire [31:0] timeout_cycle = 50; //10
 
   // Reset IMem, DMem, and RegFile before running new test
   task reset;
@@ -635,6 +635,98 @@ if (1) begin
    $display("[%d] Test CSRRWI passed!", current_test_id);
 end
 */
+if (0) begin : test_backwards_branch_while_loop
+    integer i;
+    // 테스트 케이스용 배열: 초기 x1, 종료 조건(x2), 최종 기대 x1, 그리고 테스트 이름.
+    reg [31:0] init_x1 [0:4];
+    reg [31:0] term_x2 [0:4];
+    reg [31:0] exp_x1  [0:4];
+    reg [255:0] test_name [0:4];
+
+    // Test Case 1: x1 = 10, x2 = 3 → 루프 반복 후 x1 최종값 = 3
+    init_x1[0] = 32'd10;
+    term_x2[0] = 32'd3;
+    exp_x1[0]  = 32'd3;
+    test_name[0] = "Test Case 1: final x1 = 3";
+
+    // Test Case 2: x1 = 15, x2 = 5 → 루프 반복 후 x1 최종값 = 5
+    init_x1[1] = 32'd15;
+    term_x2[1] = 32'd5;
+    exp_x1[1]  = 32'd5;
+    test_name[1] = "Test Case 2: final x1 = 5";
+
+    // Test Case 3: x1 = 8, x2 = 0 → 루프 반복 후 x1 최종값 = 0
+    init_x1[2] = 32'd8;
+    term_x2[2] = 32'd0;
+    exp_x1[2]  = 32'd0;
+    test_name[2] = "Test Case 3: final x1 = 0";
+
+    // Test Case 4: x1 = 7, x2 = 2 → 루프 반복 후 x1 최종값 = 2
+    init_x1[3] = 32'd7;
+    term_x2[3] = 32'd2;
+    exp_x1[3]  = 32'd2;
+    test_name[3] = "Test Case 4: final x1 = 2";
+
+    // Test Case 5: x1 = 20, x2 = 10 → 루프 반복 후 x1 최종값 = 10
+    init_x1[4] = 32'd20;
+    term_x2[4] = 32'd10;
+    exp_x1[4]  = 32'd10;
+    test_name[4] = "Test Case 5: final x1 = 10";
+
+    for (i = 0; i < 5; i = i + 1) begin
+        // 각 테스트 케이스마다 CPU와 레지스터 파일 초기화
+        reset();
+        init_rf();
+
+        // 레지스터 파일 초기화: x1 = init_x1, x2 = term_x2
+        `RF_PATH.mem[1] = init_x1[i];
+        `RF_PATH.mem[2] = term_x2[i];
+
+        // R-type 명령어를 위해, 추가로 x3와 x4에 값을 넣습니다.
+        // (예: ADD x6, x3, x4 → x6 = 100 + 200 = 300)
+        `RF_PATH.mem[3] = 32'd100;
+        `RF_PATH.mem[4] = 32'd200;
+
+        // 명령어 주소 초기화
+        INST_ADDR = 14'h0000;
+
+        // Instruction 0: ADDI x1, x1, -1
+        // I-type 포맷: {imm[11:0], rs1, funct3, rd, opcode}
+        // - immediate: -1 → 12'hFFF (12비트 2의 보수)
+        `IMEM_PATH.mem[INST_ADDR + 0] = {12'hFFF, 5'd1, 3'b000, 5'd1, `OPC_ARI_ITYPE};
+
+        // Instruction 1: BNE x1, x2, offset
+        // B-type 포맷: {imm[12], imm[10:5], rs2, rs1, funct3, imm[4:1], imm[11], opcode}
+        // 효과적으로 -4바이트 분기를 얻기 위해 인코딩 전 즉시값은 -2여야 하고,
+        // 재구성 시 {imm[12], imm[11], imm[10:5], imm[4:1], 1'b0} = 13'b11_111111_1110_0 (0x1FFC)가 되어야 합니다.
+        // 각 필드는 다음과 같이 설정합니다:
+        //   imm[12] = 1, imm[10:5] = 6'b111111, imm[4:1] = 4'b1110, imm[11] = 1.
+        `IMEM_PATH.mem[INST_ADDR + 1] = {
+            1'b1,         // imm[12] = 1
+            6'b111111,    // imm[10:5] = 111111
+            5'd2,         // rs2 = x2
+            5'd1,         // rs1 = x1
+            3'b001,       // funct3 = BNE
+            4'b1110,      // imm[4:1] = 1110
+            1'b1,         // imm[11] = 1
+            `OPC_BRANCH   // opcode for branch
+        };
+
+        // 분기 대상 R-type 명령어 배치:
+        // 분기 조건이 false가 되어 루프가 종료되는 경우, 순차적으로 다음 명령어(Instruction 2)가 실행됩니다.
+        // Instruction 2: R-type (ADD x6, x3, x4) → x6 = 100 + 200 = 300
+        `IMEM_PATH.mem[INST_ADDR + 2] = {`FNC7_0, 5'd4, 5'd3, `FNC_ADD_SUB, 5'd6, `OPC_ARI_RTYPE};
+
+        // 실행 시작: CPU가 명령어를 실행합니다.
+        reset_cpu();
+
+        // 각 테스트 케이스의 최종 x1 결과를 확인 (루프 종료 후, 분기 미실행 경로에서 R-type 명령어 실행)
+        check_result_rf(5'd1, exp_x1[i], test_name[i]);
+        // 또한 R-type 명령어로 인해 x6에 저장된 결과 (300)를 확인합니다.
+        check_result_rf(5'd6, 32'd300, {test_name[i], " : R-type ADD x6 = 300"});
+    end
+end
+
 
 
 if (1) begin

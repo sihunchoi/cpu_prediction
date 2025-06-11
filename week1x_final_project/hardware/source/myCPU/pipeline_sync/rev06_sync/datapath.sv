@@ -192,7 +192,9 @@ module datapath(
 		.ImmExt_path(ImmExtE),
 		.tohost_csr(tohost_csr)
 	);
-	adder u_pc_target(
+	
+    
+    adder u_pc_target(
         .a(PCE), 
         .b(ImmExtE), 
         .ci(1'b0), 

@@ -32,18 +32,18 @@
 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/bin/vcs1
 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 run.f
-61
+62
 which_declare=declare -f
-test=all
-XRDP_SOCKET_PATH=/run/xrdp/1007
-XRDP_SESSION=3638714
+test=bge
+XRDP_SOCKET_PATH=/run/xrdp/1015
+XRDP_SESSION=3938467
 XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_14
 XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_14
 XMODIFIERS=@im=ibus
-XDG_SESSION_ID=c381
-XDG_RUNTIME_DIR=/run/user/1007
+XDG_SESSION_ID=c442
+XDG_RUNTIME_DIR=/run/user/1015
 XDG_MENU_PREFIX=gnome-
-XDG_DATA_DIRS=/home2/s1_student3/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_DATA_DIRS=/home1/std251_12/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 XDG_CURRENT_DESKTOP=GNOME
 VTE_VERSION=5204
 VMR_MODE_FLAG=64
@@ -60,82 +60,91 @@ VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64
 SYNOPSYS_LC_ROOT=/tools/synopsys_2021/lc/S-2021.06-SP5
-SSH_AUTH_SOCK=/run/user/1007/keyring/ssh
+SSH_AUTH_SOCK=/run/user/1015/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SSH_AGENT_PID=3638958
+SSH_AGENT_PID=3938798
 SNPS_VCS_CLANG_PATH=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3638788,unix/unix:/tmp/.ICE-unix/3638788
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3938612,unix/unix:/tmp/.ICE-unix/3938612
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
+QSYS_ROOTDIR=/home1/std251_12/intelFPGA_lite/20.1/quartus/sopc_builder/bin
 PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
 PT_HOME=/tools/synopsys_2021/prime/S-2021.06-SP5-2
 OVA_UUM=0
 OS_LDFLAGS=
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/3
-MAKE_TERMERR=/dev/pts/3
+MAKE_TERMOUT=/dev/pts/7
+MAKE_TERMERR=/dev/pts/7
 MAKEOVERRIDES=${-*-command-variables-*-}
 MAKELEVEL=1
-MAKEFLAGS= -- test=all
+MAKEFLAGS= -- test=bge
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
 ICC2_HOME=/tools/synopsys_2021/icc2/S-2021.06-SP5-1
 HISTCONTROL=ignoredups
 GNOME_TERMINAL_SERVICE=:1.75
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/99d2d05f_97a4_4049_a1fc_695168cb5043
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/1f0b7905_3764_456a_9823_bdbdca2e88ce
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 FM_HOME=/tools/synopsys_2021/fm/S-2021.06-SP5
 DVE_HOME=/tools/synopsys_2021/vcs/S-2021.09-SP2-9/gui/dve
-DESKTOP_AUTOSTART_ID=102320dce0c9d21da2173311201642173700036387880007
+DESKTOP_AUTOSTART_ID=10f76473eec4d24dd8174918630072268000039386120007
 DEBUGINFOD_URLS=https://debuginfod.centos.org/ 
 DC_HOME=/tools/synopsys_2021/syn/S-2021.06-SP5-5
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1007/bus
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1015/bus
 COLORTERM=truecolor
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
 0
 0
-41
-1732536829 mem_path.vh
-1732536829 ../../testbench/isa_testbench.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/TimerCounter.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/data_mux.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Addr_Decoder.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_wrap.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_regs.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/tbman_apbs.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/riscvsingle.sv
-1733115189 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/datapath.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/controller.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/ASYNC_RAM_DP_WBE.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/dualport_mem_synch_rw_dualclk.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/reg_file_async.v
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Branch_Logic.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/maindec.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/aludec.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/Csr_Logic.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/alu.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/flush.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/stall.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/hazard_block/hazard_unit.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/sync_block.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/delay.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/M_W_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/E_M_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/D_E_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/pipeline_block/F_D_DFF.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/be_logic_load.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/be_logic_store.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/mux3.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/mux2.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/flopr.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/flopenr.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/extend.sv
-1733114859 ../../src/rtl/myCPU/pipeline_sync/rev06_sync/building_blocks/adder.sv
-1732536829 ./sim_define.v
-1733116275 run.f
+49
+1741245574 mem_path.vh
+1741245574 ../../testbench/isa_testbench.v
+1747098053 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/SMU_RV32I_System.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/TimerCounter.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/data_mux.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/Addr_Decoder.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/tbman_wrap.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/tbman_regs.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/tbman_apbs.v
+1747142640 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/riscvsingle.sv
+1747800586 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/datapath.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/controller.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/ASYNC_RAM_DP_WBE.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/dualport_mem_synch_rw_dualclk.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/reg_file_async.v
+1747800668 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/Branch_Logic.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/maindec.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/aludec.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/Csr_Logic.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/alu.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/peripheral_uart/uart.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/peripheral_uart/uart_wrap.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/peripheral_uart/uart_transmitter.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/peripheral_uart/uart_receiver.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/peripheral_gpio/SEG7_LUT.v
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/peripheral_gpio/GPIO.v
+1747800677 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/hazard_block/flush.sv
+1747366374 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/hazard_block/stall.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/hazard_block/hazard_unit.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/pipeline_block/sync_block.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/pipeline_block/delay.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/pipeline_block/M_W_DFF.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/pipeline_block/E_M_DFF.sv
+1747269558 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/pipeline_block/D_E_DFF.sv
+1747366406 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/pipeline_block/F_D_DFF.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/be_logic_load.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/be_logic_store.sv
+1744626748 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/back_prediction.sv
+1747800579 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/mux4.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/mux3.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/mux2.sv
+1747366384 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/flopr.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/flopenr.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/extend.sv
+1742377702 ../../src/rtl/myCPU/pipeline_sync/rev07_prediction/building_blocks/adder.sv
+1741245574 ./sim_define.v
+1742798216 run.f
 1680083496 /tools/synopsys_2021/verdi/S-2021.09-SP2-9/share/PLI/VCS/LINUX64/verdi.tab
 1681355180 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/vcsdp_lite.tab
 4
@@ -143,5 +152,5 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1681355912 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/liberrorinf.so
 1681355870 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libsnpsmalloc.so
 1681355909 /tools/synopsys_2021/vcs/S-2021.09-SP2-9/linux64/lib/libvfs.so
-1733116295 simv.daidir
+1749187226 simv.daidir
 -1 partitionlib

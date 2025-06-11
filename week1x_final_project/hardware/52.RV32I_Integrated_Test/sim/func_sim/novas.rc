@@ -222,9 +222,10 @@ Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
 [FileBrowser]
-nWaveOpenFsdbDirHistory = "\"/home2/s1_student3/project1/2024fa_cpu_design/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/wave.fsdb\""
+nWaveOpenFsdbDirHistory = "\"/home2/s1_student3/project1/2024fa_cpu_design/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/wave.fsdb\"" "\"/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/wave.fsdb\""
 [Form]
 version = Verdi_S-2021.09-SP2-9
+schLoadSym.fm = 100,100,364,353
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
@@ -376,11 +377,15 @@ saveWaveformStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
-openFileDlg = 658,329,602,483
-QwWarnMsgDlg = 650,444,600,250
-QwUserAskDlg = 797,420,324,134
-qWaveSignalDialog = 559,331,800,479
 importDesignForm = 601,284,715,574
+openFileDlg = 658,329,602,483
+ChangeColorDialog = 802,417,313,307
+restoreSigDlg = 683,352,551,438
+QwWarnMsgDlg = 650,444,600,250
+QwUserAskDlg = 798,505,324,134
+qWaveSignalDialog = 559,331,1077,479
+unknownSave = 728,448,461,245
+unknownSave_SaveSignal(s)NotFound = 663,401,590,340
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -396,7 +401,7 @@ HighlightSafetyObject = TRUE
 2 = /home/user/projects/2023_fall/2023fa_cpu_design/week09/hardware/02.RV32I_Integrated_Test/sim/func_sim/VerdiLog/novas_autosave.ses
 3 = /home/user/VerdiLog/novas_autosave.ses
 4 = /home/user/Verdi-UltraLog/novas_autosave.ses
-1 = /home2/s1_student3/project1/2024fa_cpu_design/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/Verdi-UltraLog/novas_autosave.ses
+1 = /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/Verdi-UltraLog/novas_autosave.ses
 [Simulation]
 scsPath = scsim
 scsOption = 
@@ -578,7 +583,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = 239 113 1440 752 45
+viewport = -1 26 1920 1016 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -681,21 +686,21 @@ visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
-name = Severity
-width = 60
-visualIndex = 1
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Code
 width = 60
 visualIndex = 2
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Severity
+width = 60
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -839,8 +844,8 @@ autoSyncHorizontalRange = FALSE
 autoSyncVerticalScroll = FALSE
 waveClickMemberNode = FALSE
 RotateAnalogColor = ID_RED5 ID_ORANGE5 ID_YELLOW5 ID_GREEN5 ID_CYAN5 ID_BLUE5 ID_PURPLE5 ID_RED7 ID_ORANGE7 ID_YELLOW4 ID_GREEN7 ID_CYAN7 ID_BLUE7 ID_PURPLE7 ID_ORANGE4 ID_YELLOW5
-getSignalForm = 559 294 800 479 164 381 390 89
-viewPort = 0 25 1440 284 100 65
+getSignalForm = 559 294 1077 479 459 381 372 89
+viewPort = 0 25 1920 402 146 65
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -1006,7 +1011,8 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/home2/s1_student3/project1/2024fa_cpu_design/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/wave.fsdb\""
+RecentFile1 = "\"/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/wave.fsdb\""
+RecentFile2 = "\"/home2/s1_student3/project1/2024fa_cpu_design/week1x_final_project/hardware/52.RV32I_Integrated_Test/sim/func_sim/wave.fsdb\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER12 -c ID_CYAN5
 value_window_font = -f COURIER12 -c ID_CYAN5
@@ -1107,7 +1113,7 @@ InputPinStatus = 1
 OutputPinStatus = 2
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
-UserName = s1_student3
+UserName = std251_12
 CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
 PrefixN = eco_n
 PrefixP = eco_p
@@ -1277,7 +1283,7 @@ schAsmTriColor_qt = #01ffff qt_solidLine
 pre_select = True
 ShowPassThroughNet = False
 ComputedAnnotColor = ID_PURPLE5
-viewport = 0 25 957 284
+viewport = 0 25 1353 401
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1353,9 +1359,9 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1440 284 100 65
+viewPort = 0 25 1920 402 146 65
 [wave.1]
-viewPort = 127 219 960 332 100 65
+viewPort = 0 25 1920 385 100 65
 [wave.2]
 viewPort = 38 314 686 205 100 65
 [wave.3]

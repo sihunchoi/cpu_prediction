@@ -112,7 +112,7 @@ Branch = 1
 [DesignTree]
 IfShowModule = {TRUE, FALSE}
 [DisabledMessages]
-version = Verdi_R-2020.12-SP2
+version = Verdi_S-2021.09-SP2-9
 [Editor]
 editorName = TurboEditor
 [Emacs]
@@ -222,14 +222,14 @@ Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
 [Form]
-version = Verdi_R-2020.12-SP2
+version = Verdi_S-2021.09-SP2-9
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
 cmd_enter_form = FALSE
 SyncBrowserDir = TRUE
 ShowWndCtntDuringResizing = FALSE
-version = Verdi_R-2020.12-SP2
+version = Verdi_S-2021.09-SP2-9
 SignalCaseInSensitive = FALSE
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
@@ -375,7 +375,7 @@ savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
 QwWarnMsgDlg = 650,444,600,250
-QwUserAskDlg = 1758,1029,324,130
+QwUserAskDlg = 798,507,324,130
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -388,10 +388,10 @@ AnnotateSignal = TRUE
 HighlightSafetyObject = TRUE
 [Session Cache]
 5 = string (session file name)
-1 = /home/user/projects/2023_fall/2023fa_cpu_design/week09/hardware/02.RV32I_Integrated_Test/sim/func_sim/Verdi-UltraLog/novas_autosave.ses
 2 = /home/user/projects/2023_fall/2023fa_cpu_design/week09/hardware/02.RV32I_Integrated_Test/sim/func_sim/VerdiLog/novas_autosave.ses
 3 = /home/user/VerdiLog/novas_autosave.ses
 4 = /home/user/Verdi-UltraLog/novas_autosave.ses
+1 = /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/02.RV32I_Integrated_Test/sim/func_sim/Verdi-UltraLog/novas_autosave.ses
 [Simulation]
 scsPath = scsim
 scsOption = 
@@ -571,7 +571,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = -10 20 3840 2057 45
+viewport = -1 26 1920 1016 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -662,33 +662,33 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Severity
-width = 60
-visualIndex = 1
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = Message
-width = 2000
-visualIndex = 4
-isHidden = FALSE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Time
 width = 60
 visualIndex = 0
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = Message
+width = 2000
+visualIndex = 4
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Severity
+width = 60
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -974,7 +974,10 @@ signal_rc_abspath = TRUE
 signal_rc_no_natural_bus_range = FALSE
 save_scope_with_macro = FALSE
 FitAnaByBusSize = FALSE
+DisplayVerticalZoomTools = FALSE
+DisplayIndicateBar = FALSE
 overlay_added_analog_signals = FALSE
+overlay_same_added_analog_signals = FALSE
 case_insensitive = FALSE
 resaveSignals = TRUE
 adjustBusPrefix = adjustBus_
@@ -1096,7 +1099,7 @@ InputPinStatus = 1
 OutputPinStatus = 2
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
-UserName = user
+UserName = std251_12
 CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
 PrefixN = eco_n
 PrefixP = eco_p
@@ -1142,6 +1145,7 @@ Fault_Cov_Show = TRUE
 Undetected_Show = TRUE
 Num_of_Fault_Show = TRUE
 Num_of_Inst_Show = TRUE
+Num_of_Displayed_Fault_Show = FALSE
 [hvpsetting]
 importExcelXMLOptions = 
 use_test_loca_as_source = FALSE

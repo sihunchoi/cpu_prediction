@@ -1,0 +1,490 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-sv" "-f" "run.f"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "940" "19" "960" "1016"
+srcHBSelect "cpu_tb" -win $_nTrace1
+srcSetScope "cpu_tb" -delim "." -win $_nTrace1
+srcHBSelect "cpu_tb" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+schCreateWindow -delim "." -win $_nSchema1 -scope "cpu_tb"
+wvCreateWindow
+verdiSetActWin -win $_nWave3
+wvRestoreSignal -win $_nWave3 \
+           "/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/53.RV32I_sync_Integrated_Test_update/sim/func_sim/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvSetCursor -win $_nWave3 650.884789 -snap {("G1" 7)}
+wvSetCursor -win $_nWave3 670.551456 -snap {("G1" 7)}
+wvSetCursor -win $_nWave3 688.889293 -snap {("G1" 7)}
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 3
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 14 )} 
+wvSelectGroup -win $_nWave3 {G4}
+wvSetPosition -win $_nWave3 {("G4" 0)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 14)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 11)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 10)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 6)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 5)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 4)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 3)}
+wvMoveSelected -win $_nWave3
+wvSetPosition -win $_nWave3 {("PC-targetD" 3)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 15)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 15)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 3)}
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvSetCursor -win $_nWave3 678.524429 -snap {("PC-targetD" 3)}
+wvSetCursor -win $_nWave3 670.019924 -snap {("G1" 14)}
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+verdiDockWidgetMaximize -dock windowDock_nWave_3
+wvSelectSignal -win $_nWave3 {( "G1" 3 )} 
+wvSetCursor -win $_nWave3 649.024429 -snap {("G1" 6)}
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 13 )} 
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 7 )} 
+wvSetCursor -win $_nWave3 630.155059 -snap {("G1" 5)}
+wvSetCursor -win $_nWave3 631.749654 -snap {("G1" 4)}
+wvSetCursor -win $_nWave3 611.551456 -snap {("G1" 5)}
+wvSetCursor -win $_nWave3 629.889293 -snap {("G1" 5)}
+wvSetCursor -win $_nWave3 628.294699 -snap {("G1" 4)}
+wvSetCursor -win $_nWave3 649.024429 -snap {("G1" 5)}
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 9 )} 
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 10 )} 
+wvSetCursor -win $_nWave3 688.357762 -snap {("PC-targetD" 2)}
+wvSetCursor -win $_nWave3 708.555960 -snap {("G1" 20)}
+verdiWindowResize -win $_Verdi_1 "940" "19" "960" "1016"
+wvSetCursor -win $_nWave3 638.393798 -snap {("PC-targetD" 12)}
+wvMoveSelected -win $_nWave3
+wvSetPosition -win $_nWave3 {("PC-targetD" 3)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 4)}
+wvSetActiveFile -win $_nWave3 -applyAnnotation off \
+           {/home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/53.RV32I_sync_Integrated_Test_update/sim/func_sim/wave.fsdb}
+wvSetCursor -win $_nWave3 681.713618 -snap {("PC-targetD" 4)}
+wvSetCursor -win $_nWave3 720.515420 -snap {("G1" 11)}
+verdiWindowResize -win $_Verdi_1 "940" "19" "960" "1016"
+wvSetCursor -win $_nWave3 652.655826 -snap {("PC-targetD" 0)}
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvSetCursor -win $_nWave3 604.197968 -snap {("G1" 11)}
+wvZoomAll -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSetCursor -win $_nWave3 138.854369 -snap {("G1" 11)}
+wvSetCursor -win $_nWave3 267.148936 -snap {("PC-targetE" 0)}
+wvZoomAll -win $_nWave3
+wvSetCursor -win $_nWave3 896.321277 -snap {("G1" 15)}
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 10 )} 
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 9 )} 
+wvSetCursor -win $_nWave3 409.367104 -snap {("G1" 10)}
+wvSetCursor -win $_nWave3 409.595828 -snap {("G1" 11)}
+wvGetSignalOpen -win $_nWave3
+wvGetSignalSetScope -win $_nWave3 "/ASYNC_RAM_DP_WBE"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4"
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvAddSignal -win $_nWave3 -clear
+wvAddSignal -win $_nWave3 -group {"G1" \
+{/cpu_tb/CPU/icpu/clk} \
+{/cpu_tb/CPU/icpu/n_rst} \
+{/cpu_tb/CPU/icpu/PCSrc\[1:0\]} \
+{/cpu_tb/CPU/icpu/PC\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra1\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra2\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/wd\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/we} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in0\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in3\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/out\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/sel\[1:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_Extend/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"G1/PC-targetE" \
+}
+wvAddSignal -win $_nWave3 -group {"G1" {/cpu_tb/CPU/icpu/i_datapath/u_pc_target/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/sum\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/Btaken} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in4\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in5\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in6\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/sel\[2:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD/G4" \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" {/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_back_prediction/prediction} \
+{/cpu_tb/CPU/icpu/u_branch/predictionE} \
+{/cpu_tb/CPU/icpu/i_datapath/u_Extend/out\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/BranchE} \
+{/cpu_tb/CPU/icpu/Branch} \
+{/cpu_tb/CPU/icpu/u_flush/FlushD} \
+{/cpu_tb/CPU/icpu/u_flush/FlushE} \
+}
+wvAddSignal -win $_nWave3 -group {"G3" \
+}
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 5 6 7 8 )} 
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvAddSignal -win $_nWave3 -clear
+wvAddSignal -win $_nWave3 -group {"G1" \
+{/cpu_tb/CPU/icpu/clk} \
+{/cpu_tb/CPU/icpu/n_rst} \
+{/cpu_tb/CPU/icpu/PCSrc\[1:0\]} \
+{/cpu_tb/CPU/icpu/PC\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra1\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra2\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/wd\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/we} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in0\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in3\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/out\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/sel\[1:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_Extend/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"G1/PC-targetE" \
+}
+wvAddSignal -win $_nWave3 -group {"G1" {/cpu_tb/CPU/icpu/i_datapath/u_pc_target/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/sum\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/Btaken} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in4\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in5\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in6\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/sel\[2:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD/G4" \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" {/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_back_prediction/prediction} \
+{/cpu_tb/CPU/icpu/u_branch/predictionE} \
+{/cpu_tb/CPU/icpu/i_datapath/u_Extend/out\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/BranchE} \
+{/cpu_tb/CPU/icpu/Branch} \
+{/cpu_tb/CPU/icpu/u_flush/FlushD} \
+{/cpu_tb/CPU/icpu/u_flush/FlushE} \
+}
+wvAddSignal -win $_nWave3 -group {"G3" \
+}
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 5 6 7 8 )} 
+wvSetPosition -win $_nWave3 {("PC-targetD" 8)}
+wvGetSignalClose -win $_nWave3
+wvSetPosition -win $_nWave3 {("PC-targetD" 5)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 2)}
+wvSetPosition -win $_nWave3 {("PC-targetD" 0)}
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvSetPosition -win $_nWave3 {("G1" 17)}
+wvSetPosition -win $_nWave3 {("G1" 16)}
+wvSetPosition -win $_nWave3 {("G1" 15)}
+wvSetPosition -win $_nWave3 {("G1" 14)}
+wvMoveSelected -win $_nWave3
+wvSetPosition -win $_nWave3 {("G1" 14)}
+wvSetPosition -win $_nWave3 {("G1" 18)}
+wvSelectSignal -win $_nWave3 {( "G1" 18 )} 
+wvSelectSignal -win $_nWave3 {( "G1" 20 )} 
+wvCut -win $_nWave3
+wvSetPosition -win $_nWave3 {("G1" 18)}
+wvSelectSignal -win $_nWave3 {( "G1" 19 )} 
+wvSelectSignal -win $_nWave3 {( "G1" 20 )} 
+wvSelectSignal -win $_nWave3 {( "G1" 20 )} 
+wvCut -win $_nWave3
+wvSetPosition -win $_nWave3 {("G1" 18)}
+wvSelectSignal -win $_nWave3 {( "G1" 19 )} 
+wvSelectSignal -win $_nWave3 {( "G1" 18 )} 
+wvSetCursor -win $_nWave3 369.435009 -snap {("G1" 4)}
+wvSetCursor -win $_nWave3 389.333945 -snap {("G1" 4)}
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 9 )} 
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 13 )} 
+wvSelectSignal -win $_nWave3 {( "PC-targetD" 9 )} 
+wvGetSignalOpen -win $_nWave3
+wvGetSignalSetScope -win $_nWave3 "/ASYNC_RAM_DP_WBE"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu/i_datapath"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu/i_datapath"
+wvGetSignalSetScope -win $_nWave3 "/cpu_tb/CPU/icpu"
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvAddSignal -win $_nWave3 -clear
+wvAddSignal -win $_nWave3 -group {"G1" \
+{/cpu_tb/CPU/icpu/clk} \
+{/cpu_tb/CPU/icpu/n_rst} \
+{/cpu_tb/CPU/icpu/PCSrc\[1:0\]} \
+{/cpu_tb/CPU/icpu/PC\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra1\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra2\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/wd\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/we} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in0\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in3\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in4\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in5\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in6\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/sel\[2:0\]} \
+{/cpu_tb/CPU/icpu/InstrD\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"G1/PC-targetE" \
+}
+wvAddSignal -win $_nWave3 -group {"G1" {/cpu_tb/CPU/icpu/i_datapath/u_pc_target/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/sum\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/Btaken} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD/G4" \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" {/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_back_prediction/prediction} \
+{/cpu_tb/CPU/icpu/u_branch/predictionE} \
+{/cpu_tb/CPU/icpu/i_datapath/u_Extend/out\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/BranchE} \
+{/cpu_tb/CPU/icpu/Branch} \
+{/cpu_tb/CPU/icpu/u_flush/FlushD} \
+{/cpu_tb/CPU/icpu/u_flush/FlushE} \
+}
+wvAddSignal -win $_nWave3 -group {"G3" \
+}
+wvSelectSignal -win $_nWave3 {( "G1" 19 )} 
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvAddSignal -win $_nWave3 -clear
+wvAddSignal -win $_nWave3 -group {"G1" \
+{/cpu_tb/CPU/icpu/clk} \
+{/cpu_tb/CPU/icpu/n_rst} \
+{/cpu_tb/CPU/icpu/PCSrc\[1:0\]} \
+{/cpu_tb/CPU/icpu/PC\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra1\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/ra2\[4:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/rd2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/wd\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/rf/we} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in0\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in1\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in2\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in3\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in4\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in5\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/in6\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/sel\[2:0\]} \
+{/cpu_tb/CPU/icpu/InstrD\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_next_mux4/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"G1/PC-targetE" \
+}
+wvAddSignal -win $_nWave3 -group {"G1" {/cpu_tb/CPU/icpu/i_datapath/u_pc_target/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_target/sum\[31:0\]} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/Btaken} \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD/G4" \
+}
+wvAddSignal -win $_nWave3 -group {"PC-targetD" {/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/a\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/b\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_pc_prediction/sum\[31:0\]} \
+{/cpu_tb/CPU/icpu/i_datapath/u_back_prediction/prediction} \
+{/cpu_tb/CPU/icpu/u_branch/predictionE} \
+{/cpu_tb/CPU/icpu/i_datapath/u_Extend/out\[31:0\]} \
+{/cpu_tb/CPU/icpu/u_branch/BranchE} \
+{/cpu_tb/CPU/icpu/Branch} \
+{/cpu_tb/CPU/icpu/u_flush/FlushD} \
+{/cpu_tb/CPU/icpu/u_flush/FlushE} \
+}
+wvAddSignal -win $_nWave3 -group {"G3" \
+}
+wvSelectSignal -win $_nWave3 {( "G1" 19 )} 
+wvSetPosition -win $_nWave3 {("G1" 19)}
+wvGetSignalClose -win $_nWave3
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvSetCursor -win $_nWave3 411.172582 -snap {("G1" 15)}
+wvSetCursor -win $_nWave3 393.789603 -snap {("G1" 15)}
+wvSetCursor -win $_nWave3 390.587475 -snap {("G1" 15)}
+wvSetCursor -win $_nWave3 389.672582 -snap {("G1" 9)}
+wvSetCursor -win $_nWave3 409.800241 -snap {("G1" 18)}
+wvSetCursor -win $_nWave3 359.252369 -snap {("G1" 23)}
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvZoomAll -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 18 )} 
+wvSetCursor -win $_nWave3 350.786414 -snap {("PC-targetD" 10)}
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvZoomAll -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvSetCursor -win $_nWave3 351.199609 -snap {("G1" 7)}
+wvSetCursor -win $_nWave3 369.040035 -snap {("G1" 4)}
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 19 )} 
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvSetCursor -win $_nWave3 364.694290 -snap {("PC-targetD" 3)}
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvSetCursor -win $_nWave3 364.008120 -snap {("PC-targetD" 3)}
+wvZoomAll -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSetCursor -win $_nWave3 968.963578 -snap {("G1" 15)}
+wvDisplayGridCount -win $_nWave3 -off
+wvGetSignalClose -win $_nWave3
+wvReloadFile -win $_nWave3
+wvSetCursor -win $_nWave3 894.237071 -snap {("G1" 11)}
+wvZoomAll -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 1
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvSetCursor -win $_nWave3 2568.156598 -snap {("G1" 20)}
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0
+wvScrollDown -win $_nWave3 0

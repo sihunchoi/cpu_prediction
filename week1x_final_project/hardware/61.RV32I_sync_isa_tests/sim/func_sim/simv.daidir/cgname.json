@@ -53,6 +53,24 @@
         "module",
         15
     ],
+    "GPIO": [
+        "GPIO",
+        "JWNVz",
+        "module",
+        7
+    ],
+    "pulse_gen": [
+        "pulse_gen",
+        "T7HIq",
+        "module",
+        17
+    ],
+    "SEG7_LUT": [
+        "SEG7_LUT",
+        "HiIcb",
+        "module",
+        18
+    ],
     "Branch_Logic": [
         "Branch_Logic",
         "MhVit",
@@ -65,6 +83,12 @@
         "module",
         9
     ],
+    "controller": [
+        "controller",
+        "KBY0m",
+        "module",
+        20
+    ],
     "tbman_wrap": [
         "tbman_wrap",
         "Ln2ne",
@@ -76,6 +100,12 @@
         "gMGVA",
         "module",
         11
+    ],
+    "data_mux": [
+        "data_mux",
+        "Dxf2Z",
+        "module",
+        19
     ],
     "isa_testbench": [
         "isa_testbench",

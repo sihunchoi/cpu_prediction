@@ -1,6 +1,6 @@
 Flow report for SMU_RV32I_System
-Wed Jan 22 15:38:28 2025
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Thu Mar  6 20:31:31 2025
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -41,8 +41,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jan 22 15:38:28 2025       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Flow Status                        ; Successful - Thu Mar  6 20:31:31 2025       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SMU_RV32I_System                            ;
 ; Top-level Entity Name              ; SMU_RV32I_System                            ;
 ; Family                             ; Cyclone IV E                                ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/22/2025 15:37:37 ;
+; Start date & time ; 03/06/2025 20:30:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SMU_RV32I_System    ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 157180767254807.173752785753181        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 81686175108127.174126063351938         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -114,9 +114,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 1002 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:38     ; 1.2                     ; 2555 MB             ; 00:01:33                           ;
-; Total                ; 00:00:51     ; --                      ; --                  ; 00:01:54                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 908 MB              ; 00:00:20                           ;
+; Fitter               ; 00:00:37     ; 1.2                     ; 2594 MB             ; 00:01:35                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 625 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.9                     ; 1005 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 877 MB              ; 00:00:01                           ;
+; Total                ; 00:00:56     ; --                      ; --                  ; 00:02:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -125,8 +128,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+-------------+-------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name     ; OS Version  ; Processor type ;
 +----------------------+------------------+-------------+-------------+----------------+
-; Analysis & Synthesis ; sse506           ; Rocky Linux ; Rocky Linux ; x86_64         ;
-; Fitter               ; sse506           ; Rocky Linux ; Rocky Linux ; x86_64         ;
+; Analysis & Synthesis ; sse506-s2        ; Rocky Linux ; Rocky Linux ; x86_64         ;
+; Fitter               ; sse506-s2        ; Rocky Linux ; Rocky Linux ; x86_64         ;
+; Assembler            ; sse506-s2        ; Rocky Linux ; Rocky Linux ; x86_64         ;
+; Timing Analyzer      ; sse506-s2        ; Rocky Linux ; Rocky Linux ; x86_64         ;
+; EDA Netlist Writer   ; sse506-s2        ; Rocky Linux ; Rocky Linux ; x86_64         ;
 +----------------------+------------------+-------------+-------------+----------------+
 
 
@@ -135,6 +141,9 @@ https://fpgasoftware.intel.com/eula.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off SMU_RV32I_System -c SMU_RV32I_System
 quartus_fit --read_settings_files=off --write_settings_files=off SMU_RV32I_System -c SMU_RV32I_System
+quartus_asm --read_settings_files=off --write_settings_files=off SMU_RV32I_System -c SMU_RV32I_System
+quartus_sta SMU_RV32I_System -c SMU_RV32I_System
+quartus_eda --read_settings_files=off --write_settings_files=off SMU_RV32I_System -c SMU_RV32I_System
 
 
 

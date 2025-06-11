@@ -1,6 +1,6 @@
 Fitter report for SMU_RV32I_System
-Wed Jan 22 15:38:28 2025
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Thu Mar  6 20:31:23 2025
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -41,6 +41,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  33. Fitter Device Options
  34. Operating Settings and Conditions
  35. Fitter Messages
+ 36. Fitter Suppressed Messages
 
 
 
@@ -67,8 +68,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 22 15:38:28 2025       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Fitter Status                      ; Successful - Thu Mar  6 20:31:23 2025       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SMU_RV32I_System                            ;
 ; Top-level Entity Name              ; SMU_RV32I_System                            ;
 ; Family                             ; Cyclone IV E                                ;
@@ -154,19 +155,19 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 64          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.20        ;
+; Average used               ; 1.22        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.7%      ;
-;     Processor 3            ;   1.7%      ;
-;     Processor 4            ;   1.6%      ;
-;     Processor 5            ;   1.5%      ;
-;     Processor 6            ;   1.5%      ;
-;     Processor 7            ;   1.4%      ;
-;     Processor 8            ;   1.4%      ;
-;     Processors 9-16        ;   1.1%      ;
+;     Processor 2            ;   1.9%      ;
+;     Processor 3            ;   1.9%      ;
+;     Processor 4            ;   1.8%      ;
+;     Processor 5            ;   1.7%      ;
+;     Processor 6            ;   1.7%      ;
+;     Processor 7            ;   1.6%      ;
+;     Processor 8            ;   1.6%      ;
+;     Processors 9-16        ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -208,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/student08/2025cpu/altera/RISCV5stage/quartus/output_files/SMU_RV32I_System.pin.
+The pin-out file can be found in /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/quartus/output_files/SMU_RV32I_System.pin.
 
 
 +---------------------------------------------------------------------------+
@@ -2755,7 +2756,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info (332104): Reading SDC File: '../src/SMU_RV32I_System.sdc'
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Warning (332125): Found combinational loop of 4 nodes File: /home/student08/2025cpu/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/aludec.sv Line: 19
+Warning (332125): Found combinational loop of 4 nodes File: /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/aludec.sv Line: 19
     Warning (332126): Node "icpu|u_controller|adec|ALUControl[0]|combout"
     Warning (332126): Node "icpu|u_controller|adec|ALUControl[0]~10|datac"
     Warning (332126): Node "icpu|u_controller|adec|ALUControl[0]~10|combout"
@@ -2766,21 +2767,21 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):   20.000     CLOCK_50
-Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: /home/student08/2025cpu/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v Line: 12
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
-Info (176353): Automatically promoted node reset_ff  File: /home/student08/2025cpu/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v Line: 64
+Info (176353): Automatically promoted node reset_ff  File: /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/SMU_RV32I_System.v Line: 64
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node uart_wrap:u_uart_wrap|uart:u_uart|serial_out_reg File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart.v Line: 22
-        Info (176357): Destination node uart_wrap:u_uart_wrap|uart:u_uart|uart_transmitter:uatransmit|tx_shift[1] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_transmitter.v Line: 46
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[0] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[8] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
-        Info (176357): Destination node TimerCounter:iTimer|StatusR[0] File: /home/student08/2025cpu/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/TimerCounter.v Line: 51
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[7] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[9] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[6] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[5] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
-        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[4] File: /home/student08/2025cpu/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node uart_wrap:u_uart_wrap|uart:u_uart|serial_out_reg File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart.v Line: 22
+        Info (176357): Destination node uart_wrap:u_uart_wrap|uart:u_uart|uart_transmitter:uatransmit|tx_shift[1] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_uart/uart_transmitter.v Line: 46
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[0] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[8] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node TimerCounter:iTimer|StatusR[0] File: /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/src/myCPU/pipeline_sync/rev06_sync/TimerCounter.v Line: 51
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[7] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[9] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[6] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[5] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
+        Info (176357): Destination node GPIO:U_GPIO|SW_StatusR[4] File: /home1/std251_12/cpu2025-quartus-/week1x_final_project/hardware/source/myCPU/pipeline_sync/rev06_sync/peripheral_gpio/GPIO.v Line: 193
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2798,16 +2799,23 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 32% of the available device resources in the region that extends from location X81_Y37 to location X91_Y48
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:15
-Info (11888): Total time spent on timing analysis during the Fitter is 2.25 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.32 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (144001): Generated suppressed messages file /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/quartus/output_files/SMU_RV32I_System.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 2555 megabytes
-    Info: Processing ended: Wed Jan 22 15:38:28 2025
+    Info: Peak virtual memory: 2594 megabytes
+    Info: Processing ended: Thu Mar  6 20:31:24 2025
     Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:01:34
+    Info: Total CPU time (on all processors): 00:01:36
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in /home1/std251_12/cpu2025-quartus-/altera/RISCV5stage/quartus/output_files/SMU_RV32I_System.fit.smsg.
 
 
